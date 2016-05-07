@@ -1,7 +1,6 @@
 <?php
 
-use \PDOException,
-    Doctrine\DBAL\DBALException,
+use Doctrine\DBAL\DBALException,
     Symfony\Component\HttpFoundation\Response,
     Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException,
     Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException,
@@ -13,7 +12,7 @@ $app->error(function (PDOException $PDOException, $code) use($app) {
         return;
     } else {
         // Aqui ira la vista error/db.html.twig
-        return new Response(/*$PDOException->getMessage()*/);
+        return new Response('Database error: ' . $PDOException->getMessage());
     }
 });
 

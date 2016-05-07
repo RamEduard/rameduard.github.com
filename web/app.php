@@ -8,9 +8,9 @@ require_once __DIR__ . '/../app/autoload.php';
 //     $upload_path = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['BASE'] .  '/uploads';
 //     $modules_path = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['BASE'] .  '/modules';
 // } else {
-    $asset_path = 'http://' . $_SERVER['SERVER_NAME'] . '/assets';
-    $upload_path = 'http://' . $_SERVER['SERVER_NAME'] . '/uploads';
-    $modules_path = 'http://' . $_SERVER['SERVER_NAME'] . '/modules';
+    $asset_path = 'http://' . $_SERVER['SERVER_NAME'] . '/web/assets';
+    $upload_path = 'http://' . $_SERVER['SERVER_NAME'] . '/web/uploads';
+    $modules_path = 'http://' . $_SERVER['SERVER_NAME'] . '/web/modules';
 // }
 
 # Application
