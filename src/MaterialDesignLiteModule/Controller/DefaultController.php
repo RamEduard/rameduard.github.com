@@ -27,5 +27,13 @@ class DefaultController
     {
         return $app['twig']->render('mdl-default/index.twig', array());
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    function commingSoon(App $app)
+    {
+        return $app['twig']->render('mdl-default/comming-soon.twig');
+    }
     
 }
