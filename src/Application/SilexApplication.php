@@ -5,6 +5,7 @@ namespace Application;
 use Silex\Application as BaseApplication;
 use Application\MVCModule;
 use Silex\ServiceProviderInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Description of Application
@@ -217,7 +218,7 @@ class SilexApplication extends BaseApplication
     /**
      * Custom Application Run
      */
-    function run() 
+    function run(Request $request = NULL) 
     {
         $app = $this;
         
@@ -227,7 +228,7 @@ class SilexApplication extends BaseApplication
             }
         });
         
-        parent::run();
+        parent::run($request);
     }
     
 }
