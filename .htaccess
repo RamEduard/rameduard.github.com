@@ -1,0 +1,7 @@
+RewriteBase /
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !favicon.ico$
+    RewriteRule ^ web/app.php [L]
+</IfModule>
