@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .constant('API_URL', '/web/api')
+        .constant('API_URL', '/api')
         .constant('ASSETS_URL', '/web/assets')
         .constant('MODULES_URL', '/web/modules')
         .constant('CSS_URL', '/web/modules/materialdesignlite/css')
