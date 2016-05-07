@@ -1,0 +1,50 @@
+<!-- Extra styles -->
+<style>
+  @import url({{ cssUrl }}/sign.css);
+</style>
+<!-- Sign In Row -->
+<div class="row login-row">
+    <div class="col-xs-12">
+      <form class="form-signin" role="form" ng-submit="signIn()">    
+        <h3 class="form-signin-heading">Sign In</h3>
+        <hr class="colorgraph"><br>
+        <!-- Error callout -->
+        <div class="callout callout-danger" ng-if="error">
+            <button type="button" class="close" onclick="$('.callout').fadeOut(1000)">×</button>
+            <h4>Error</h4>
+            <p>{{ error }}</p>
+            <pre>{{ details }}</pre>
+        </div>
+        <!-- Success callout -->
+        <div class="callout callout-info" ng-if="success">
+            <button type="button" class="close" onclick="$('.callout').fadeOut(1000)">×</button>
+            <h4>Sign In Successful</h4>
+            <p>{{ success }}</p>
+            <pre>{{ details }}</pre>
+        </div> 
+        <input 
+          type="email" 
+          class="form-control" 
+          ng-model="email" 
+          placeholder="Email" 
+          required="" 
+          autofocus="" />
+
+        <input 
+          type="password" 
+          class="form-control" 
+          ng-model="password" 
+          placeholder="Password" 
+          required="" />          
+       
+        <button 
+          class="btn btn-lg btn-primary btn-block" 
+          name="Submit" 
+          type="Submit">Sign In</button>
+
+        <br />
+
+        <p>Do you have an Account? <a href="#/sign-up">Sign Up</a></p>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+{% extends "layout/base.twig" %}
+
+{% block stylesheets %}
+    <!-- MDL Deep Orange-Indigo -->
+    <link rel="stylesheet" href="{{ app.modules_path }}/materialdesignlite/css/material.deep_orange-indigo.css" />
+    <!-- MDL Styles -->
+    <link rel="stylesheet" type="text/css" href="{{ app.modules_path }}/materialdesignlite/css/styles.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Roboto font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+{% endblock %}
+
+{% block title %}Material Design Lite{% endblock %}
+
+{% block html_params %}ng-app="app"{% endblock %}
+
+{% block body %}
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <!-- Header -->
+        {% block header %}
+            {% include 'mdl-layout/header.twig' %}
+        {% endblock %}
+        <!-- Menu -->
+        {% block menu %}
+            {% include 'mdl-layout/menu.twig' %}
+        {% endblock %}
+        {% block container %}
+            <main class="mdl-layout__content">
+                <div ng-view></div>
+                {% block footer %}
+                    {% include 'mdl-layout/footer.twig' %}
+                {% endblock %}
+            </main>
+        {% endblock %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <!-- Angular Lib -->
+    <script src="{{ app.asset_path }}/js/plugins/angular/angular.min.js"></script>
+    <!-- Angular Route Lib -->
+    <script src="{{ app.asset_path }}/js/plugins/angular-route/angular-route.min.js"></script>
+
+    <!-- Angular APP -->
+    <script src="{{ app.modules_path }}/materialdesignlite/js/material.min.js"></script>
+
+    <!-- Angular APP -->
+    <script src="{{ app.modules_path }}/materialdesignlite/js/app.js"></script>
+
+    <!-- Config constants and routes -->
+    <script src="{{ app.modules_path }}/materialdesignlite/config/constants.js"></script>
+    <script src="{{ app.modules_path }}/materialdesignlite/config/routes.js"></script>
+
+    <!-- Services -->
+    <script src="{{ app.modules_path }}/materialdesignlite/services/user.js"></script>
+
+    <!-- Controllers -->
+    <script src="{{ app.modules_path }}/materialdesignlite/controllers/about.js"></script>
+    <script src="{{ app.modules_path }}/materialdesignlite/controllers/contact.js"></script>
+    <script src="{{ app.modules_path }}/materialdesignlite/controllers/home.js"></script>
+    <script src="{{ app.modules_path }}/materialdesignlite/controllers/portfolio-item.js"></script>
+    <script src="{{ app.modules_path }}/materialdesignlite/controllers/sign-in.js"></script>
+    <script src="{{ app.modules_path }}/materialdesignlite/controllers/sign-up.js"></script>
+
+{% endblock %}
